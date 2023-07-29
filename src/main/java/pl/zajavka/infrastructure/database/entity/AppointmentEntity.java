@@ -1,0 +1,36 @@
+package pl.zajavka.infrastructure.database.entity;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.time.LocalDate;
+
+@Getter
+@Setter
+@EqualsAndHashCode(of = "appointmentId")
+@ToString(of = {"appointmentId", "doctor", "patient", "appointmentDate", "status"})
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "appointments")
+public class AppointmentEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long appointmentId;
+
+    @ManyToOne
+    @JoinColumn(name = "doctor_id", nullable = false)
+    private DoctorEntity doctor;
+
+    @ManyToOne
+    @JoinColumn(name = "patient_id", nullable = false)
+    private PatientEntity patient;
+
+    @Column(nullable = false)
+    private LocalDate appointmentDate;
+
+    @Column(nullable = false)
+    private String status;
+}
