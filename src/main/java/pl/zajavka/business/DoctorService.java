@@ -2,9 +2,7 @@ package pl.zajavka.business;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
-import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 import pl.zajavka.business.dao.DoctorDAO;
 import pl.zajavka.domain.Doctor;
@@ -34,5 +32,15 @@ public class DoctorService {
             throw new NotFoundException("Could not find doctor by pesel: [%s]".formatted(pesel));
         }
         return doctor.get();
+    }
+
+    @Transactional
+    public void saveAvailabilityRequest(Doctor doctor) {
+        doctorDAO.saveAvailabilityRequest(doctor);
+    }
+
+    @Transactional
+    public Doctor saveDoctor(Doctor doctor) {
+        return doctorDAO.saveDoctor(doctor);
     }
 }
