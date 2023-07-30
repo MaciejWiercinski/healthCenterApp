@@ -3,7 +3,8 @@ package pl.zajavka.infrastructure.database.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
+
 @Getter
 @Setter
 @EqualsAndHashCode(of = "historyId")
@@ -29,5 +30,5 @@ public class MedicalHistoryEntity {
     private String treatmentDetails;
 
     @Column(nullable = false)
-    private LocalDate dateRecorded;
+    private OffsetDateTime dateRecorded;
 }

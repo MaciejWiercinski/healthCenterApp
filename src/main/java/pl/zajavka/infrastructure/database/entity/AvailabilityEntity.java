@@ -3,11 +3,12 @@ package pl.zajavka.infrastructure.database.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
+
 @Getter
 @Setter
 @EqualsAndHashCode(of = "availabilityId")
-@ToString(of = {"availabilityId", "doctor", "patient", "startDate", "endDate"})
+@ToString(of = {"availabilityId", "doctor", "startDate", "endDate"})
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -24,8 +25,8 @@ public class AvailabilityEntity {
     private DoctorEntity doctor;
 
     @Column(nullable = false)
-    private LocalDate startDate;
+    private OffsetDateTime startDate;
 
     @Column(nullable = false)
-    private LocalDate endDate;
+    private OffsetDateTime endDate;
 }

@@ -3,7 +3,7 @@ package pl.zajavka.infrastructure.database.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 @Getter
 @Setter
@@ -29,7 +29,7 @@ public class AppointmentEntity {
     private PatientEntity patient;
 
     @Column(nullable = false)
-    private LocalDate appointmentDate;
+    private OffsetDateTime appointmentDate;
 
     @Column(nullable = false)
     private String status;
