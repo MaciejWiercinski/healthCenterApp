@@ -34,10 +34,6 @@ public class DoctorService {
         return doctor.get();
     }
 
-    @Transactional
-    public void saveAvailabilityRequest(Doctor doctor) {
-        doctorDAO.saveAvailabilityRequest(doctor);
-    }
 
     @Transactional
     public Doctor saveDoctor(Doctor doctor) {

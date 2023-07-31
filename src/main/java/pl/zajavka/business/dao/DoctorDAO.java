@@ -11,7 +11,6 @@ public interface DoctorDAO {
 
     Optional<Doctor> findByPesel(String pesel);
 
-    void saveAvailabilityRequest(Doctor doctor);
 
     Doctor saveDoctor(Doctor doctor);
 }
