@@ -17,7 +17,6 @@ public class DoctorRepository implements DoctorDAO {
     private final DoctorJpaRepository doctorJpaRepository;
     private final DoctorEntityMapper doctorEntityMapper;
 
-    private final
     @Override
     public List<Doctor> findAvailable() {
         return doctorJpaRepository.findAll().stream()
