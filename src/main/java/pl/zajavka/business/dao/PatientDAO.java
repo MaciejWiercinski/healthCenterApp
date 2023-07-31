@@ -7,4 +7,6 @@ import java.util.Optional;
 public interface PatientDAO {
 
     Optional<Patient> findByPesel(String pesel);
+
+    Patient savePatient(Patient patient);
 }
