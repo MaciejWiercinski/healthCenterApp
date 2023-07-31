@@ -2,7 +2,6 @@ package pl.zajavka.business;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
-import lombok.CustomLog;
 import org.springframework.stereotype.Service;
 import pl.zajavka.business.dao.PatientDAO;
 import pl.zajavka.domain.Patient;

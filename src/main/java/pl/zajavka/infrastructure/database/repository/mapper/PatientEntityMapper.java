@@ -2,9 +2,7 @@ package pl.zajavka.infrastructure.database.repository.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
-import pl.zajavka.domain.Doctor;
 import pl.zajavka.domain.Patient;
-import pl.zajavka.infrastructure.database.entity.DoctorEntity;
 import pl.zajavka.infrastructure.database.entity.PatientEntity;
 
 @Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
