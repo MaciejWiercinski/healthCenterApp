@@ -11,7 +11,7 @@ import java.time.OffsetDateTime;
 @ToString(of = {"appointment", "noteText", "timestamp"})
 public class Note {
 
-    Long noteId;
+    Integer noteId;
     Appointment appointment;
     String noteText;
     OffsetDateTime timestamp;

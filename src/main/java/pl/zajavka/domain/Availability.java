@@ -10,7 +10,7 @@ import java.time.OffsetDateTime;
 @ToString(of = {"doctor", "startDate", "endDate"})
 public class Availability {
 
-    Long availabilityId;
+    Integer availabilityId;
     Doctor doctor;
     OffsetDateTime startDate;
     OffsetDateTime endDate;

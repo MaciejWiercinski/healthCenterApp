@@ -17,7 +17,7 @@ import java.time.OffsetDateTime;
 public class MedicalHistoryEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long historyId;
+    private Integer historyId;
 
     @ManyToOne
     @JoinColumn(name = "patient_id", nullable = false)

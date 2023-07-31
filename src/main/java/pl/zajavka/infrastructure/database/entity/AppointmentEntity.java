@@ -18,7 +18,7 @@ public class AppointmentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long appointmentId;
+    private Integer appointmentId;
 
     @ManyToOne
     @JoinColumn(name = "doctor_id", nullable = false)

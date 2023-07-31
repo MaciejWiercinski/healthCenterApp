@@ -9,7 +9,7 @@ import lombok.*;
 @ToString(of = {"doctorId", "name", "surname", "pesel", "specialty"})
 public class Doctor {
 
-    Long doctorId;
+    Integer doctorId;
     String name;
     String surname;
     String pesel;

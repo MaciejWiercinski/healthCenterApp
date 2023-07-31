@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import pl.zajavka.infrastructure.database.entity.MedicalHistoryEntity;
 
 @Repository
-public interface MedicalHistoryJpaRepository extends JpaRepository<MedicalHistoryEntity, Long> {
+public interface MedicalHistoryJpaRepository extends JpaRepository<MedicalHistoryEntity, Integer> {
 }

@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import pl.zajavka.infrastructure.database.entity.DoctorEntity;
 
 @Repository
-public interface DoctorJpaRepository extends JpaRepository<DoctorEntity, Long> {
+public interface DoctorJpaRepository extends JpaRepository<DoctorEntity, Integer> {
 }

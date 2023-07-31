@@ -18,7 +18,7 @@ public class NoteEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long noteId;
+    private Integer noteId;
 
     @ManyToOne
     @JoinColumn(name = "appointment_id", nullable = false)

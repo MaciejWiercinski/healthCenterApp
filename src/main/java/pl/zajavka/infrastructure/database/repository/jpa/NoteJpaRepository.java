@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import pl.zajavka.infrastructure.database.entity.NoteEntity;
 
 @Repository
-public interface NoteJpaRepository extends JpaRepository<NoteEntity, Long> {
+public interface NoteJpaRepository extends JpaRepository<NoteEntity, Integer> {
 }

@@ -18,7 +18,7 @@ public class AvailabilityEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long availabilityId;
+    private Integer availabilityId;
 
     @ManyToOne
     @JoinColumn(name = "doctor_id", nullable = false)

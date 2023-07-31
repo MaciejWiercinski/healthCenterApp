@@ -11,7 +11,7 @@ import java.time.OffsetDateTime;
 @ToString(of = {"appointmentId", "doctor", "patient", "appointmentDate", "status"})
 public class Appointment {
 
-    Long appointmentId;
+    Integer appointmentId;
     Doctor doctor;
     Patient patient;
     OffsetDateTime appointmentDate;
