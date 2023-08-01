@@ -20,7 +20,7 @@ public class MedicalHistoryEntity {
     private Integer historyId;
 
     @ManyToOne
-    @JoinColumn(name = "patient_id", nullable = false)
+    @JoinColumn(name = "patient_pesel", nullable = false)
     private PatientEntity patient;
 
     @Column(nullable = false)

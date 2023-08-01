@@ -21,11 +21,11 @@ public class AppointmentEntity {
     private Integer appointmentId;
 
     @ManyToOne
-    @JoinColumn(name = "doctor_id", nullable = false)
+    @JoinColumn(name = "doctor_pesel", nullable = false)
     private DoctorEntity doctor;
 
     @ManyToOne
-    @JoinColumn(name = "patient_id", nullable = false)
+    @JoinColumn(name = "patient_pesel", nullable = false)
     private PatientEntity patient;
 
     @Column(nullable = false)
