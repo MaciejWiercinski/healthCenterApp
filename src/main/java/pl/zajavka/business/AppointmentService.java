@@ -4,6 +4,8 @@ import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.OffsetDateTime;
+
 @Service
 @AllArgsConstructor
 public class AppointmentService {
@@ -12,7 +14,7 @@ public class AppointmentService {
     private final DoctorService doctorService;
     private final AvailabilityService availabilityService;
     @Transactional
-    public void makeAppointment() {
+    public void makeAppointment(DoctorService doctor, PatientService patient, OffsetDateTime date) {
 
     }
 
