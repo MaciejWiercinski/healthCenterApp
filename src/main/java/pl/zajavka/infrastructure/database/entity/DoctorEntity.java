@@ -5,8 +5,8 @@ import lombok.*;
 
 @Getter
 @Setter
-@EqualsAndHashCode(of = "doctorId")
-@ToString(of = {"name","surname", "pesel", "specialty"})
+@EqualsAndHashCode(of = "doctorPesel")
+@ToString(of = {"name","surname", "doctorPesel", "specialty"})
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -24,8 +24,8 @@ public class DoctorEntity {
     @Column(nullable = false)
     private String surname;
 
-    @Column(nullable = false)
-    private String pesel;
+    @Column(name = "doctor_pesel", nullable = false)
+    private String doctorPesel;
 
     @Column(nullable = false)
     private String specialty;

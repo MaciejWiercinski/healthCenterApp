@@ -5,8 +5,8 @@ import lombok.*;
 
 @Getter
 @Setter
-@EqualsAndHashCode(of = "patientId")
-@ToString(of = {"patientId", "name", "surname", "pesel", "contactInfo"})
+@EqualsAndHashCode(of = "patientPesel")
+@ToString(of = {"patientId", "name", "surname", "patientPesel", "contactInfo"})
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -24,8 +24,8 @@ public class PatientEntity {
     @Column(nullable = false)
     private String surname;
 
-    @Column(nullable = false)
-    private String pesel;
+    @Column(name = "patient_pesel", nullable = false)
+    private String patientPesel;
 
     @Column(nullable = false)
     private String contactInfo;

@@ -21,7 +21,7 @@ public class AvailabilityEntity {
     private Integer availabilityId;
 
     @ManyToOne
-    @JoinColumn(name = "doctor_id", nullable = false)
+    @JoinColumn(name = "doctor_pesel", nullable = false)
     private DoctorEntity doctor;
 
     @Column(nullable = false)

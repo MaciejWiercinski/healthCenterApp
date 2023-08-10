@@ -25,8 +25,8 @@ public class DoctorRepository implements DoctorDAO {
     }
 
     @Override
-    public Optional<Doctor> findByPesel(String pesel) {
-        return doctorJpaRepository.findByPesel(pesel)
+    public Optional<Doctor> findByPesel(String doctorPesel) {
+        return doctorJpaRepository.findByDoctorPesel(doctorPesel)
                 .map(doctorEntityMapper::mapFromEntity);
     }
 

@@ -5,13 +5,13 @@ import lombok.*;
 @With
 @Value
 @Builder
-@EqualsAndHashCode(of = "pesel")
-@ToString(of = {"patientId", "name", "surname", "pesel", "contactInfo"})
+@EqualsAndHashCode(of = "patientPesel")
+@ToString(of = {"patientId", "name", "surname", "patientPesel", "contactInfo"})
 public class Patient {
 
     Integer patientId;
     String name;
     String surname;
-    String pesel;
+    String patientPesel;
     String contactInfo;
 }

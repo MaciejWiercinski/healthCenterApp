@@ -15,8 +15,8 @@ public class AvailabilityService {
     private final DoctorService doctorService;
 
     @Transactional
-    public Availability createAvailability(Doctor doctor, OffsetDateTime startDate, OffsetDateTime endDate) {
-        Doctor availableDoctor = doctorService.findDoctor(doctor.getPesel());
+    public Availability specifyAvailability(Doctor doctor, OffsetDateTime startDate, OffsetDateTime endDate) {
+        Doctor availableDoctor = doctorService.findDoctor(doctor.getDoctorPesel());
         return buildAvailability(availableDoctor, startDate, endDate);
     }
 

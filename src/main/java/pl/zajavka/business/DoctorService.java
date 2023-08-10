@@ -18,6 +18,7 @@ public class DoctorService {
 
     private final DoctorDAO doctorDAO;
 
+
     @Transactional
     public List<Doctor> findAvailable() {
         List<Doctor> availableDoctors = doctorDAO.findAvailable();
@@ -26,10 +27,10 @@ public class DoctorService {
     }
 
     @Transactional
-    public Doctor findDoctor(String pesel) {
-        Optional<Doctor> doctor = doctorDAO.findByPesel(pesel);
+    public Doctor findDoctor(String doctorPesel) {
+        Optional<Doctor> doctor = doctorDAO.findByPesel(doctorPesel);
         if (doctor.isEmpty()) {
-            throw new NotFoundException("Could not find doctor by pesel: [%s]".formatted(pesel));
+            throw new NotFoundException("Could not find doctor by doctorPesel: [%s]".formatted(doctorPesel));
         }
         return doctor.get();
     }

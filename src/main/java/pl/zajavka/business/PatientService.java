@@ -16,10 +16,10 @@ public class PatientService {
     private final PatientDAO patientDAO;
 
     @Transactional
-    public Patient findPatient(String pesel) {
-        Optional<Patient> patient = patientDAO.findByPesel(pesel);
+    public Patient findPatient(String patientPesel) {
+        Optional<Patient> patient = patientDAO.findByPesel(patientPesel);
         if (patient.isEmpty()) {
-            throw new NotFoundException("Could not find patient by pesel: [%s]".formatted(pesel));
+            throw new NotFoundException("Could not find patient by patientPesel: [%s]".formatted(patientPesel));
         }
         return patient.get();
     }

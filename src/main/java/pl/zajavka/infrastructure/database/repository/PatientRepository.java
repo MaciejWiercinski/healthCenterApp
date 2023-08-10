@@ -18,8 +18,8 @@ public class PatientRepository implements PatientDAO {
     private final PatientEntityMapper patientEntityMapper;
 
     @Override
-    public Optional<Patient> findByPesel(String pesel) {
-        return patientJpaRepository.findByPesel(pesel)
+    public Optional<Patient> findByPesel(String patientPesel) {
+        return patientJpaRepository.findByPatientPesel(patientPesel)
                 .map(patientEntityMapper::mapFromEntity);
     }
 
