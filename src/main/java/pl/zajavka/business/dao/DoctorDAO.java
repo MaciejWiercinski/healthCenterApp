@@ -7,7 +7,6 @@ import java.util.Optional;
 
 public interface DoctorDAO {
 
-    List<Doctor> findAvailable();
 
     Optional<Doctor> findByPesel(String doctorPesel);
 

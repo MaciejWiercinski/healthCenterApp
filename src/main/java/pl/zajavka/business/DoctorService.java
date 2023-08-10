@@ -18,14 +18,6 @@ public class DoctorService {
 
     private final DoctorDAO doctorDAO;
 
-
-    @Transactional
-    public List<Doctor> findAvailable() {
-        List<Doctor> availableDoctors = doctorDAO.findAvailable();
-        log.info("Available Doctor: [{}]", availableDoctors.size());
-        return availableDoctors;
-    }
-
     @Transactional
     public Doctor findDoctor(String doctorPesel) {
         Optional<Doctor> doctor = doctorDAO.findByPesel(doctorPesel);

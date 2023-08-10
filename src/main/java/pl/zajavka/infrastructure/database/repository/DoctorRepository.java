@@ -17,12 +17,7 @@ public class DoctorRepository implements DoctorDAO {
     private final DoctorJpaRepository doctorJpaRepository;
     private final DoctorEntityMapper doctorEntityMapper;
 
-    @Override
-    public List<Doctor> findAvailable() {
-        return doctorJpaRepository.findAll().stream()
-                .map(doctorEntityMapper::mapFromEntity)
-                .toList();
-    }
+
 
     @Override
     public Optional<Doctor> findByPesel(String doctorPesel) {
