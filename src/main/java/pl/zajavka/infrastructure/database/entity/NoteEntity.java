@@ -20,7 +20,7 @@ public class NoteEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer noteId;
 
-    @ManyToOne
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "appointment_id", nullable = false)
     private AppointmentEntity appointment;
 

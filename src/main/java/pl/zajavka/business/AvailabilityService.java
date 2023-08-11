@@ -7,6 +7,7 @@ import pl.zajavka.domain.Availability;
 import pl.zajavka.domain.Doctor;
 
 import java.time.OffsetDateTime;
+import java.util.Set;
 
 @Service
 @AllArgsConstructor
@@ -15,9 +16,17 @@ public class AvailabilityService {
     private final DoctorService doctorService;
 
     @Transactional
-    public Availability specifyAvailability(Doctor doctor, OffsetDateTime startDate, OffsetDateTime endDate) {
-        Doctor availableDoctor = doctorService.findDoctor(doctor.getDoctorPesel());
-        return buildAvailability(availableDoctor, startDate, endDate);
+    public void saveAvailability(Availability availability) {
+        Doctor doctor = doctorService.saveDoctor(availability.getDoctor());
+        OffsetDateTime startDate = availability.getStartDate();
+        OffsetDateTime endDate = availability.getEndDate();
+
+        Availability buildAvailability = buildAvailability(doctor, startDate, endDate);
+        Set<Availability> availabilities = doctor.getAvailabilities();
+        availabilities.add(buildAvailability);
+        doctorService.saveAvailability(doctor.withAvailabilities(availabilities));
+
+
     }
 
     private Availability buildAvailability(Doctor doctor, OffsetDateTime startDate, OffsetDateTime endDate) {

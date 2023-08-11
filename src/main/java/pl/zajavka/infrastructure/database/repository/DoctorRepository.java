@@ -8,7 +8,6 @@ import pl.zajavka.infrastructure.database.entity.DoctorEntity;
 import pl.zajavka.infrastructure.database.repository.jpa.DoctorJpaRepository;
 import pl.zajavka.infrastructure.database.repository.mapper.DoctorEntityMapper;
 
-import java.util.List;
 import java.util.Optional;
 @Repository
 @AllArgsConstructor
@@ -31,4 +30,5 @@ public class DoctorRepository implements DoctorDAO {
         DoctorEntity saved = doctorJpaRepository.save(toSave);
         return doctorEntityMapper.mapFromEntity(saved);
     }
+
 }

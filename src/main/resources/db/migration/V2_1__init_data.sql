@@ -1,17 +1,17 @@
-INSERT INTO Doctors (name, surname, doctor_pesel, specialty)
-VALUES ('Dr. John', 'Smith', '12345678901', 'Cardiology'),
-       ('Dr. Emily', 'Johnson', '23456789012', 'Pediatrics'),
-       ('Dr. Michael', 'Brown', '34567890123', 'Neurology');
+INSERT INTO Doctors (name, surname, doctor_pesel, specialty, email, phone)
+VALUES ('Dr. John', 'Smith', '12345678901', 'Cardiology','john.smith@example.com', '123-456-780'),
+       ('Dr. Emily', 'Johnson', '23456789012', 'Pediatrics', 'emily.johnson@example.com', '987-654-310'),
+       ('Dr. Michael', 'Brown', '34567890123', 'Neurology', 'michael.brown@example.com','987-654-310');
 
 INSERT INTO availability (doctor_pesel, start_date, end_date)
 VALUES ('12345678901', '2023-08-01 08:00:00', '2023-08-01 12:00:00'),
        ('23456789012', '2023-08-02 09:00:00', '2023-08-02 13:00:00'),
        ('34567890123', '2023-08-01 10:00:00', '2023-08-01 14:00:00');
 
-INSERT INTO Patients (name, surname, patient_pesel, contact_info)
-VALUES ('Alice', 'Johnson', '45678901234', 'alice@example.com'),
-       ('Bob', 'Anderson', '56789012345', 'bob@example.com'),
-       ('Carol', 'Davis', '67890123456', 'carol@example.com');
+INSERT INTO Patients (name, surname, patient_pesel, email, phone)
+VALUES ('Alice', 'Johnson', '45678901234', 'alice.johnson@example.com', '555-123-456'),
+       ('Bob', 'Anderson', '56789012345', 'bob.anderson@example.com', '888-987-653'),
+       ('Carol', 'Davis', '67890123456', 'carol.davis@example.com', '567-421-234');
 
 INSERT INTO Appointments (doctor_pesel, patient_pesel, appointment_date, status)
 VALUES ('12345678901', '45678901234', '2023-08-02', 'scheduled'),

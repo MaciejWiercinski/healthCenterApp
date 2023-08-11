@@ -20,12 +20,12 @@ public class AppointmentEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer appointmentId;
 
-    @ManyToOne
-    @JoinColumn(name = "doctor_pesel", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "doctor_id", nullable = false)
     private DoctorEntity doctor;
 
-    @ManyToOne
-    @JoinColumn(name = "patient_pesel", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "patient_id", nullable = false)
     private PatientEntity patient;
 
     @Column(nullable = false)
@@ -33,4 +33,7 @@ public class AppointmentEntity {
 
     @Column(nullable = false)
     private String status;
+
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "appointment")
+    private NoteEntity note;
 }

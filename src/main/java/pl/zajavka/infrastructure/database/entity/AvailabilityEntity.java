@@ -20,8 +20,8 @@ public class AvailabilityEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer availabilityId;
 
-    @ManyToOne
-    @JoinColumn(name = "doctor_pesel", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "doctor_id", nullable = false)
     private DoctorEntity doctor;
 
     @Column(nullable = false)

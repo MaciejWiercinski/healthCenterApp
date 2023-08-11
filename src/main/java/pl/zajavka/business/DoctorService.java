@@ -8,7 +8,6 @@ import pl.zajavka.business.dao.DoctorDAO;
 import pl.zajavka.domain.Doctor;
 import pl.zajavka.domain.exception.NotFoundException;
 
-import java.util.List;
 import java.util.Optional;
 
 @Slf4j
@@ -27,7 +26,10 @@ public class DoctorService {
         return doctor.get();
     }
 
-
+    @Transactional
+    public void saveAvailability(Doctor doctor) {
+        doctorDAO.saveAvailability(doctor);
+    }
     @Transactional
     public Doctor saveDoctor(Doctor doctor) {
         return doctorDAO.saveDoctor(doctor);

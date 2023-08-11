@@ -3,10 +3,12 @@ package pl.zajavka.infrastructure.database.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.Set;
+
 @Getter
 @Setter
 @EqualsAndHashCode(of = "doctorPesel")
-@ToString(of = {"name","surname", "doctorPesel", "specialty"})
+@ToString(of = {"name","surname", "doctorPesel", "specialty", "email", "phone"})
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -29,4 +31,17 @@ public class DoctorEntity {
 
     @Column(nullable = false)
     private String specialty;
+
+    @Column(nullable = false)
+    private String email;
+
+    @Column(nullable = false)
+    private String phone;
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "doctor")
+    private Set<AvailabilityEntity> availabilities;
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "doctor")
+    private Set<AppointmentEntity> appointments;
+
 }

@@ -1,6 +1,7 @@
 package pl.zajavka.domain;
 
 import lombok.*;
+import pl.zajavka.infrastructure.database.entity.NoteEntity;
 
 import java.time.OffsetDateTime;
 
@@ -16,4 +17,5 @@ public class Appointment {
     Patient patient;
     OffsetDateTime appointmentDate;
     String status;
+    NoteEntity note;
 }

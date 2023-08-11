@@ -19,8 +19,8 @@ public class MedicalHistoryEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer historyId;
 
-    @ManyToOne
-    @JoinColumn(name = "patient_pesel", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "patient_id", nullable = false)
     private PatientEntity patient;
 
     @Column(nullable = false)
