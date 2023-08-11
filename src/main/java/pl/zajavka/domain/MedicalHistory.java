@@ -2,7 +2,7 @@ package pl.zajavka.domain;
 
 import lombok.*;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @With
 @Value
@@ -15,5 +15,5 @@ public class MedicalHistory {
     Patient patient;
     String medicalCondition;
     String treatmentDetails;
-    OffsetDateTime dateRecorded;
+    LocalDateTime dateRecorded;
 }

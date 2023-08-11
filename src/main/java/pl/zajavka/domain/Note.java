@@ -2,7 +2,7 @@ package pl.zajavka.domain;
 
 import lombok.*;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @With
 @Value
@@ -14,5 +14,5 @@ public class Note {
     Integer noteId;
     Appointment appointment;
     String noteText;
-    OffsetDateTime timestamp;
+    LocalDateTime timestamp;
 }

@@ -3,7 +3,7 @@ package pl.zajavka.infrastructure.database.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -28,5 +28,5 @@ public class NoteEntity {
     private String noteText;
 
     @Column(nullable = false)
-    private OffsetDateTime timestamp;
+    private LocalDateTime timestamp;
 }

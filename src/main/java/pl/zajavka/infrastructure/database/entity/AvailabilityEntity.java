@@ -3,7 +3,7 @@ package pl.zajavka.infrastructure.database.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -25,8 +25,8 @@ public class AvailabilityEntity {
     private DoctorEntity doctor;
 
     @Column(nullable = false)
-    private OffsetDateTime startDate;
+    private LocalDateTime startDate;
 
     @Column(nullable = false)
-    private OffsetDateTime endDate;
+    private LocalDateTime endDate;
 }

@@ -2,7 +2,7 @@ package pl.zajavka.domain;
 
 import lombok.*;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 @With
 @Value
 @Builder
@@ -12,6 +12,6 @@ public class Availability {
 
     Integer availabilityId;
     Doctor doctor;
-    OffsetDateTime startDate;
-    OffsetDateTime endDate;
+    LocalDateTime startDate;
+    LocalDateTime endDate;
 }

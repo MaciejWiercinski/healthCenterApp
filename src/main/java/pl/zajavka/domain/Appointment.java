@@ -3,7 +3,7 @@ package pl.zajavka.domain;
 import lombok.*;
 import pl.zajavka.infrastructure.database.entity.NoteEntity;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @With
 @Value
@@ -15,7 +15,7 @@ public class Appointment {
     Integer appointmentId;
     Doctor doctor;
     Patient patient;
-    OffsetDateTime appointmentDate;
+    LocalDateTime appointmentDate;
     String status;
     NoteEntity note;
 }
